@@ -67,6 +67,9 @@
 					<li class="nav-item"  >
 						<a href="add_new_user.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="feather icon-user"></i></span><span class="pcoded-mtext">Add New User</span></a>
 					</li>
+					<li class="nav-item"  >
+						<a href="add_new_unit.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-balance-scale"></i></span><span class="pcoded-mtext">Add New Unit</span></a>
+					</li>
 					
 					
 					
