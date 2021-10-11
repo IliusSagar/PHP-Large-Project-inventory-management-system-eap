@@ -549,7 +549,7 @@
 										</div>
 										<div class="card-body  text-center">
 											<div class="usre-image">
-												<img src="../assets/images/widget/img-round1.jpg" class="img-radius wid-100 m-auto" alt="User-Profile-Image">
+												<img src="assets/images/widget/img-round1.jpg" class="img-radius wid-100 m-auto" alt="User-Profile-Image">
 											</div>
 											<h6 class="f-w-600 m-t-25 m-b-10">Alessa Robert</h6>
 											<p>Active | Male | Born 23.05.1992</p>

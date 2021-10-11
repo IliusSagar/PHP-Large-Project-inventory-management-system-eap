@@ -1,5 +1,5 @@
 <?php 
-	include "connection.php";
+	include "../user/connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 
 <head>
 
-	<title>Inventory Management System (EAP)</title>
+	<title>Admin Login</title>
 	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 11]>
@@ -23,14 +23,14 @@
 	<meta name="author" content="Codedthemes" />
 
 	<!-- Favicon icon -->
-	<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 	<!-- fontawesome icon -->
-	<link rel="stylesheet" href="../assets/fonts/fontawesome/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
 	<!-- animation css -->
-	<link rel="stylesheet" href="../assets/plugins/animation/css/animate.min.css">
+	<link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
 
 	<!-- vendor css -->
-	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 
 
 
@@ -44,7 +44,7 @@
 			<div class="row align-items-center">
 				<div class="col-md-6">
 					<div class="card-body">
-						<img src="../assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
+						<img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
 						<h4 class="mb-3 f-w-400">Login into your account</h4>
 
 						<form action="" name="form1" method="post">
@@ -71,7 +71,7 @@
 							$password=mysqli_real_escape_string($link,$_POST["password"]);
 
 							$count=0;
-							$res=mysqli_query($link,"select * from user_registration where email='$email' && password='$password' && status='active'");
+							$res=mysqli_query($link,"select * from user_registration where email='$email' && password='$password' && role='admin' && status='active'");
 							$count=mysqli_num_rows($res);
 							if($count>0)
 							{
@@ -85,7 +85,7 @@
 							{
 								?>
 								<div class="alert alert-danger">
-									Invalid email or password, or account blocked by admin
+									Invalid email or password.
 								</div>
 								<?php
 							}
@@ -114,8 +114,8 @@
 <!-- [ auth-signin ] end -->
 
 <!-- Required Js -->
-<script src="../assets/js/vendor-all.min.js"></script>
-<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/vendor-all.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 
 <!-- <div class="footer-fab">
@@ -124,8 +124,8 @@
     </div>
     <div class="fab-hover">
         <ul class="list-unstyled">
-            <li><a href="../doc/index-bc-package.html" target="_blank" data-text="UI Kit" class="btn btn-icon btn-rounded btn-info m-0"><i class="feather icon-layers"></i></a></li>
-            <li><a href="../doc/index.html" target="_blank" data-text="Document" class="btn btn-icon btn-rounded btn-primary m-0"><i class="feather icon feather icon-book"></i></a></li>
+            <li><a href="doc/index-bc-package.html" target="_blank" data-text="UI Kit" class="btn btn-icon btn-rounded btn-info m-0"><i class="feather icon-layers"></i></a></li>
+            <li><a href="doc/index.html" target="_blank" data-text="Document" class="btn btn-icon btn-rounded btn-primary m-0"><i class="feather icon feather icon-book"></i></a></li>
         </ul>
     </div>
 </div> -->
