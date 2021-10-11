@@ -125,7 +125,7 @@
                                                             <td><?php echo $row["status"]; ?></td>
                                                             <!-- <td><a href="" >Edit</a></td>
                                                             <td><a href="">Delete</a></td> -->
-                                                            <td><button class="bg-success"><a href="" style="color: white;">Edit</a></button></td>
+                                                            <td><button class="bg-success"><a href="edit_user.php?id=<?php echo $row["id"]; ?>" style="color: white;">Edit</a></button></td>
                                                             <td><button class="bg-danger"><a href="delete_user.php?id=<?php echo $row["id"] ?>" style="color: white;">Delete</a></button></td>
                                                         	</tr>
                                                     		<?php
