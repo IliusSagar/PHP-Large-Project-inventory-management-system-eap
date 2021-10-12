@@ -71,6 +71,9 @@
 						<a href="add_new_unit.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-balance-scale"></i></span><span class="pcoded-mtext">Add New Unit</span></a>
 					</li>
 					<li class="nav-item"  >
+						<a href="add_company.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-industry"></i></span><span class="pcoded-mtext">Add New Company</span></a>
+					</li>
+					<li class="nav-item"  >
 						<a href="add_new_party.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-people-carry"></i></span><span class="pcoded-mtext">Add New Party</span></a>
 					</li>
 					
