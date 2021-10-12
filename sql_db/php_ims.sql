@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2021 at 01:50 PM
+-- Generation Time: Oct 12, 2021 at 06:46 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -37,7 +37,8 @@ CREATE TABLE `company_name` (
 --
 
 INSERT INTO `company_name` (`id`, `company_name`) VALUES
-(1, 'Walton Group');
+(1, 'Walton Group'),
+(3, 'LG Butterfly Marketing');
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,29 @@ CREATE TABLE `party_info` (
 --
 
 INSERT INTO `party_info` (`id`, `firstname`, `lastname`, `businessname`, `contact`, `address`, `city`) VALUES
-(1, 'Mr', 'Mehedi Hassan', 'Walton High Tech Industries', '01830596312', 'Chandra, Gajipur.', 'Gajipur, Bangladesh.');
+(3, 'Shamim', 'Ahmed', 'Cosmetics', '01830596314', 'Sanarpar, Narayanganj.', 'Narayanganj.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(5) NOT NULL,
+  `company_name` varchar(100) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `unit` varchar(50) NOT NULL,
+  `packing_size` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `company_name`, `product_name`, `unit`, `packing_size`) VALUES
+(6, 'Walton Group', 'Refrigerator', 'kgg', '500'),
+(7, 'LG Butterfly Marketing', 'Micro Oven', 'kgg', '100');
 
 -- --------------------------------------------------------
 
@@ -78,7 +101,8 @@ CREATE TABLE `units` (
 --
 
 INSERT INTO `units` (`id`, `unit`) VALUES
-(1, 'kgg');
+(1, 'kgg'),
+(3, 'gram');
 
 -- --------------------------------------------------------
 
@@ -123,6 +147,12 @@ ALTER TABLE `party_info`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `units`
 --
 ALTER TABLE `units`
@@ -142,19 +172,25 @@ ALTER TABLE `user_registration`
 -- AUTO_INCREMENT for table `company_name`
 --
 ALTER TABLE `company_name`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `party_info`
 --
 ALTER TABLE `party_info`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `units`
 --
 ALTER TABLE `units`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_registration`
