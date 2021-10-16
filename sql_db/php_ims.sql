@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2021 at 06:46 PM
+-- Generation Time: Oct 16, 2021 at 08:20 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -38,7 +38,8 @@ CREATE TABLE `company_name` (
 
 INSERT INTO `company_name` (`id`, `company_name`) VALUES
 (1, 'Walton Group'),
-(3, 'LG Butterfly Marketing');
+(3, 'LG Butterfly Marketing'),
+(4, 'RFL');
 
 -- --------------------------------------------------------
 
@@ -61,7 +62,8 @@ CREATE TABLE `party_info` (
 --
 
 INSERT INTO `party_info` (`id`, `firstname`, `lastname`, `businessname`, `contact`, `address`, `city`) VALUES
-(3, 'Shamim', 'Ahmed', 'Cosmetics', '01830596314', 'Sanarpar, Narayanganj.', 'Narayanganj.');
+(3, 'Shamim', 'Ahmed', 'Cosmetics Enterprise', '01830596314', 'Sanarpar, Narayanganj.', 'Narayanganj.'),
+(4, 'Humayun', 'Ahmed', 'Humayun Agro', '01830596321', 'Maymensingh', 'Maymensingh');
 
 -- --------------------------------------------------------
 
@@ -83,7 +85,58 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `company_name`, `product_name`, `unit`, `packing_size`) VALUES
 (6, 'Walton Group', 'Refrigerator', 'kgg', '500'),
-(7, 'LG Butterfly Marketing', 'Micro Oven', 'kgg', '100');
+(7, 'LG Butterfly Marketing', 'Micro Oven', 'kgg', '100'),
+(9, 'RFL', 'Olive Oil', 'litre', '300'),
+(10, 'RFL', 'Chair', 'kgg', '120');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `purchase_master`
+--
+
+CREATE TABLE `purchase_master` (
+  `id` int(5) NOT NULL,
+  `company_name` varchar(100) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `unit` varchar(50) NOT NULL,
+  `packing_size` varchar(20) NOT NULL,
+  `quantity` varchar(10) NOT NULL,
+  `price` varchar(10) NOT NULL,
+  `party_name` varchar(100) NOT NULL,
+  `purchase_type` varchar(100) NOT NULL,
+  `expiry_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `purchase_master`
+--
+
+INSERT INTO `purchase_master` (`id`, `company_name`, `product_name`, `unit`, `packing_size`, `quantity`, `price`, `party_name`, `purchase_type`, `expiry_date`) VALUES
+(22, 'Walton Group', 'Refrigerator', 'kgg', '500', '15', '', 'Humayun Agro', 'Cash', '2024-10-10'),
+(23, 'Walton Group', 'Refrigerator', 'kgg', '500', '10', '', 'Humayun Agro', 'Cash', '2024-10-10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stock_master`
+--
+
+CREATE TABLE `stock_master` (
+  `id` int(5) NOT NULL,
+  `product_company` varchar(100) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `product_unit` varchar(50) NOT NULL,
+  `product_qty` varchar(5) NOT NULL,
+  `product_selling_price` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `stock_master`
+--
+
+INSERT INTO `stock_master` (`id`, `product_company`, `product_name`, `product_unit`, `product_qty`, `product_selling_price`) VALUES
+(1, 'Walton Group', 'Refrigerator', 'kgg', '25', '0');
 
 -- --------------------------------------------------------
 
@@ -102,7 +155,8 @@ CREATE TABLE `units` (
 
 INSERT INTO `units` (`id`, `unit`) VALUES
 (1, 'kgg'),
-(3, 'gram');
+(3, 'gram'),
+(4, 'litre');
 
 -- --------------------------------------------------------
 
@@ -153,6 +207,18 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `purchase_master`
+--
+ALTER TABLE `purchase_master`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `stock_master`
+--
+ALTER TABLE `stock_master`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `units`
 --
 ALTER TABLE `units`
@@ -172,25 +238,37 @@ ALTER TABLE `user_registration`
 -- AUTO_INCREMENT for table `company_name`
 --
 ALTER TABLE `company_name`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `party_info`
 --
 ALTER TABLE `party_info`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `purchase_master`
+--
+ALTER TABLE `purchase_master`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `stock_master`
+--
+ALTER TABLE `stock_master`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `units`
 --
 ALTER TABLE `units`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_registration`

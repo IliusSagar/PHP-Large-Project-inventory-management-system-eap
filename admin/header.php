@@ -62,40 +62,27 @@
 						<label>Navigation</label>
 					</li> -->
 					<li class="nav-item active"  >
-						<a href="index.html" class="nav-link bg-danger hover-"><span class="pcoded-micon"><i id="sa-color" class="feather icon-home"></i></span><span class="pcoded-mtext" style="color: white;">Dashboard</span></a>
-					</li>
+						<a href="index.html" class="nav-link bg-danger hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-home"></i></span><span class="pcoded-mtext" style="color: white;">Dashboard</span></a>
+					</li><br>
 					<li class="nav-item"  >
-						<a href="add_new_user.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="feather icon-user"></i></span><span class="pcoded-mtext">Add New User</span></a>
-					</li>
+						<a href="add_new_user.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-user"></i></span><span class="pcoded-mtext">Add New User</span></a>
+					</li><br>
 					<li class="nav-item"  >
 						<a href="add_new_unit.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-balance-scale"></i></span><span class="pcoded-mtext">Add New Unit</span></a>
-					</li>
+					</li><br>
 					<li class="nav-item"  >
 						<a href="add_company.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-industry"></i></span><span class="pcoded-mtext">Add New Company</span></a>
-					</li>
+					</li><br>
 					<li class="nav-item"  >
 						<a href="add_products.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fab fa-product-hunt"></i></span><span class="pcoded-mtext">Add New Products</span></a>
-					</li>
+					</li><br>
 					<li class="nav-item"  >
 						<a href="add_new_party.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-people-carry"></i></span><span class="pcoded-mtext">Add New Party</span></a>
-					</li>
-					
-					
-					
-					<li class="nav-item">
-						<a href="form_elements.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form elements</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="tbl_bootstrap.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
-					</li>
-					
-					</li>
-					<li class="nav-item">
-						<a href="chart-morris.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a>
-					</li>
-					<li class="nav-item">
-						<a href="map-google.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
-					</li>
+					</li><br>
+					<li class="nav-item"  >
+						<a href="purchase_master.php" class="nav-link hover-"><span class="pcoded-micon"><i id="sa-color" class="fa fa-shopping-cart"></i></span><span class="pcoded-mtext">Purchase Master</span></a>
+					</li><br>
+		
 					
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
@@ -104,17 +91,17 @@
 							<li class=""><a href="auth-signin.html" class="" target="_blank">Sign in</a></li>
 						</ul>
 					</li>
-					<li class="nav-item"><a href="sample-page.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
+					
 					
 				</ul>
 				<div class="card text-center">
-					<div class="card-block">
+					<!-- <div class="card-block">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 						<i class="feather icon-sunset f-40"></i>
 						<h6 class="mt-3">Upgrade to EAP Soft</h6>
 						<p>upgrade for get EAP Soft and 24/7 support</p>
 						<a href="https://eapsoftware.xyz/" target="_blank" class="btn btn-gradient-primary btn-sm text-white m-0">Upgrade</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

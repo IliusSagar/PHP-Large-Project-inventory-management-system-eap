@@ -85,7 +85,7 @@
                                                 <div class="col-md-6">
                                                 	<div class="form-group">
                                                             <label>Select Unit:</label>
-                                                            <select name="unit" id="" class="form-control" name="unit">
+                                                            <select class="form-control" name="unit">
                                                             	<?php
                                                             	$res=mysqli_query($link,"SELECT * from units");
                                                             	while($row=mysqli_fetch_array($res))
